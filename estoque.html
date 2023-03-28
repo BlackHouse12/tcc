@@ -164,16 +164,16 @@
                                                     <th> Codigo <span class="icon-arrow">&UpArrow;</span></th>
                                                     <th> Valor <span class="icon-arrow">&UpArrow;</span></th>
                                                     <th> Tipo de Produto <span class="icon-arrow">&UpArrow;</span></th>
+                                                    <th> ações <span class="icon-arrow">&UpArrow;</span></th>
+
                                                     
-                                                    <th>  <span class=""</span></th>
-                                                    <th>  <span class="icon-arrow">&UpArrow;</span></th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr v-for="(comment, index) in comments">
                                                     <td >{{index}}</td>
-                                                    <td class="nomeImg"> <img src="assets/img/dog.jpg" alt="">{{comment.nameC}}</td>
+                                                    <td class="nomeImg "> <img src="assets/img/dog.jpg" alt="">{{comment.nameC}}</td>
                                                     <td> {{comment.Quantidades}} </tb>
                                                     <td> {{comment.tell}} </td>
                                                     <td> {{comment.cpff}}</td>
@@ -185,7 +185,7 @@
                                     </section>
                                 </main>
                                 <!--<h2>Nenhum agendamento por aqui</h2>-->
-                                <!--<img class="gif" src="assets/img/House searching_purple.gif" alt="searchGif">-->
+                                <!--<img class="gif" src="assets/img/House searching_purpl e.gif" alt="searchGif">-->
                             </div>
                         </div>
                     </div>
@@ -195,6 +195,10 @@
             ,
 
 
+            /*
+             <th>  <span class=""</span></th>
+             <th>  <span class="icon-arrow">&UpArrow;</span></th> 
+            */
             data: {
                 comments: [],
                 nameCliente: '',
