@@ -120,15 +120,15 @@
                         <h5>Quantidade</h5>
                         <input v-model="Quantidade" type="text" placeholder="Quantidade" list="faixa2">
                         <h5>Tipo de Produto</h5>
-                        <input v-model="rg" type="text" placeholder="Tipo de Produto" list="faixa4">
-                        <h5>valor</h5>
-                        <input v-model="cep" type="text" placeholder="valor" list="faixa3">
+                        <input v-model="TipoProdutoo" type="text" placeholder="Tipo de Produto" list="faixa4">
+                        <h5>codigo</h5>
+                        <input v-model="codigo" type="text" placeholder="codigo" list="faixa3">
                         </div>
                         <div class="columnModal">
                         <h5>Descrição do Produto</h5>
                         <input v-model="endereco" type="text" placeholder="Descrição do produto" list="faixa5">
-                        <h5>Codigo</h5>
-                        <input v-model="tel" type="text" placeholder="Codigo" list="faixa6">
+                        <h5>valor</h5>
+                        <input v-model="valor" type="text" placeholder="valor" list="faixa6">
                         <h5>Marca</h5>
                         <input v-model="marca" type="text" placeholder="Marca" list="faixa7">
                         </div>
@@ -164,20 +164,22 @@
                                                     <th> Codigo <span class="icon-arrow">&UpArrow;</span></th>
                                                     <th> Valor <span class="icon-arrow">&UpArrow;</span></th>
                                                     <th> Tipo de Produto <span class="icon-arrow">&UpArrow;</span></th>
-                                                    <th> ações <span class="icon-arrow">&UpArrow;</span></th>
+                                                    <th> ações<span class="icon-arrow">&UpArrow;</span></th>
 
                                                     
+                                                    <th>  <span class=""</span></th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr v-for="(comment, index) in comments">
-                                                    <td >{{index}}</td>
-                                                    <td class="nomeImg "> <img src="assets/img/dog.jpg" alt="">{{comment.nameC}}</td>
+                                                    <td class="nomeImg"> <img src="assets/img/dog.jpg" alt="">{{comment.foto}}</td>
+                                                    <td> {{comment.nameC}} </tb>
                                                     <td> {{comment.Quantidades}} </tb>
-                                                    <td> {{comment.tell}} </td>
-                                                    <td> {{comment.cpff}}</td>
-                                                     
+                                                    <td> {{comment.codigoo}}</td>
+                                                    <td> {{comment.valorr}} </td>
+                                                    <td> {{comment.tipoProdutoo}}</td>
+
                                                     <td><button class="edit"><i class='bx bx-edit-alt'></i></button> <button v-on:click="removeContent" class="delete"><i class='bx bx-trash' ></i></button></td>
                                                 </tr>
                                             </tbody>
@@ -185,7 +187,7 @@
                                     </section>
                                 </main>
                                 <!--<h2>Nenhum agendamento por aqui</h2>-->
-                                <!--<img class="gif" src="assets/img/House searching_purpl e.gif" alt="searchGif">-->
+                                <!--<img class="gif" src="assets/img/House searching_purple.gif" alt="searchGif">-->
                             </div>
                         </div>
                     </div>
@@ -195,18 +197,14 @@
             ,
 
 
-            /*
-             <th>  <span class=""</span></th>
-             <th>  <span class="icon-arrow">&UpArrow;</span></th> 
-            */
             data: {
                 comments: [],
-                nameCliente: '',
-                Quantidade: '',
-                rg: '',
-                cep: '',
-                endereco: '',
-                tel: '',
+                Fotoo: '',
+                nameC: '',
+                Quantidades: '',
+                tipoProdutoo: '',
+                valorr: '',
+                codigoo: '',
                 marca: ''
             },
 
@@ -217,21 +215,22 @@
                         return
                     } */
                     this.comments.push({
+                        fotoo:this.Foto,
                         nameC: this.nameCliente,
                         Quantidades: this.Quantidade,
-                        rgg: this.rg,
-                        cepp: this.cep,
-                        enderecoo: this.endereco,
-                        tell: this.tel,
+                        tipoProdutoo: this.tipoProduto,
+                        valorr: this.valor,
+                        codigoo: this.codigo,
                         marca: this.marca
                     });
 
+                    this.fotoo = '';
                     this.nameCliente = '';
                     this.Quantidade = '';
-                    this.rg = '';
-                    this.cep = '';
+                    this.tipoProduto = '';
+                    this.valor = '';
                     this.endereco = '';
-                    this.tel = '';
+                    this.codigo = '';
                     this.marca = ''; 
                 },
 
