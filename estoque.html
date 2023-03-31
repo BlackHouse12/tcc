@@ -120,7 +120,7 @@
                         <h5>Quantidade</h5>
                         <input v-model="Quantidade" type="text" placeholder="Quantidade" list="faixa2">
                         <h5>Tipo de Produto</h5>
-                        <input v-model="TipoProdutoo" type="text" placeholder="Tipo de Produto" list="faixa4">
+                        <input v-model="tipoProduto" type="text" placeholder="Tipo de Produto" list="faixa4">
                         <h5>codigo</h5>
                         <input v-model="codigo" type="text" placeholder="codigo" list="faixa3">
                         </div>
@@ -205,7 +205,8 @@
                 tipoProdutoo: '',
                 valorr: '',
                 codigoo: '',
-                marca: ''
+                marca: '',
+                DescriçãoProduto: ''
             },
 
             methods: {
@@ -221,7 +222,8 @@
                         tipoProdutoo: this.tipoProduto,
                         valorr: this.valor,
                         codigoo: this.codigo,
-                        marca: this.marca
+                        marca: this.marca,
+                        DescriçãoProdutoo: this.DescriçãoProduto
                     });
 
                     this.fotoo = '';
@@ -229,7 +231,7 @@
                     this.Quantidade = '';
                     this.tipoProduto = '';
                     this.valor = '';
-                    this.endereco = '';
+                    this.DescriçãoProduto = '';
                     this.codigo = '';
                     this.marca = ''; 
                 },
