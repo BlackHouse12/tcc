@@ -61,7 +61,7 @@
                             <span class="nav__name">Animais</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="estoque.html" class="nav__link">
                             <span class="material-symbols-sharp nav__icon">inventory</span>
                             <span class="nav__name">Estoque</span>
                         </a>
@@ -135,7 +135,7 @@
                         </div>
                         
                         <div class="modal-footer">
-                            <button v-on:click="toggleModal" v-on:click="addCliente" type="submit" class="confirm">Confirmar</button>
+                            <button v-on:click="toggleModal" v-on:click="addProduto" type="submit" class="confirm">Confirmar</button>
                             <button v-on:click="toggleModal" id="close-modal">Fechar</button>
                         </div>
                     </div>
@@ -186,8 +186,7 @@
                                         </table>
                                     </section>
                                 </main>
-                                <!--<h2>Nenhum agendamento por aqui</h2>-->
-                                <!--<img class="gif" src="assets/img/House searching_purple.gif" alt="searchGif">-->
+                                
                             </div>
                         </div>
                     </div>
@@ -211,10 +210,8 @@
 
             methods: {
 
-                addCliente(){
-                   /* if (this.nameC.trim() === '' | this.name.trim() === '' | this.raca.trim() === '' | this.service.trim() === ''){
-                        return
-                    } */
+                addProduto(){
+                   
                     this.comments.push({
                         fotoo:this.Foto,
                         nameC: this.nameCliente,
@@ -239,7 +236,8 @@
                 removeContent(index){
                     this.comments.splice(index, 1)
                 },
-
+                
+                
                 toggleModal(){
                     const openModalButton = document.querySelector("#open-modal");
                     const closeModalButton = document.querySelector("#close-modal");
