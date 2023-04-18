@@ -56,7 +56,7 @@
                             <span class="nav__name">Clientes</span>
                         </a>
 
-                        <a href="animal.html" class="nav__link active">
+                        <a href="animal.html" class="nav__link">
                             <span class="material-symbols-sharp nav__icon">pets</span>
                             <span class="nav__name">Animais</span>
                         </a>
@@ -109,7 +109,7 @@
                 </div>
                     <div id="fade" class="hide"></div>
                     <div id="modal" class="hide">
-                    <div class="modal-header">
+                    <div cl...................ass="modal-header">
                         <h2>Adicionar Fornecedor</h2>
                     </div>
                     <div class="modal-body">
@@ -117,8 +117,8 @@
                         <div class="columnModal">
                         <h5>Razão Social</h5>
                         <input v-model="RazaoSocial" type="text" placeholder="Razão Social" list="faixa">
-                        <h5>Quantidade</h5>
-                        <input v-model="Quantidade" type="text" placeholder="Quantidade" list="faixa2">
+                        <h5>Email</h5>
+                        <input v-model="email" type="text" placeholder="Email" list="faixa2">
                         <h5>Tipo de Produto</h5>
                         <input v-model="tipoProduto" type="text" placeholder="Tipo de Produto" list="faixa4">
                         <h5>Inscriçaõ Estadual</h5>
@@ -129,8 +129,10 @@
                         <input v-model="Cnpj" type="text" placeholder="Cnpj" list="faixa5">
                         <h5>telefone</h5>
                         <input v-model="telefone" type="text" placeholder="telefone" list="faixa6">
-                        <h5>Marca</h5>
-                        <input v-model="marca" type="text" placeholder="Marca" list="faixa7">
+                        <h5>cep</h5>
+                        <input v-model="cep" type="text" placeholder="cep" list="faixa7">
+                        <h5>Endereço</h5>
+                        <input v-model="endereço" type="text" placeholder="endereço" list="faixa8">
                         </div>
                         </div>
                         
@@ -200,12 +202,14 @@
                 comments: [],
                 Fotoo: '',
                 razaoS: '',
+                emall: '',
                 cnpjj: '',
                 tipoProdutoo: '',
                 telefonee: '',
                 inscEstaduall: '',
-                marca: '',
-                DescriçãoProduto: ''
+                cepp: '',
+                DescriçãoProduto: '',
+                enderecoo: ''
             },
 
             methods: {
@@ -215,22 +219,25 @@
                     this.comments.push({
                         fotoo:this.Foto,
                         razaoS: this.RazaoSocial,
+                        emaill: this.email,
                         cnpjj: this.Cnpj,
                         tipoProdutoo: this.tipoProduto,
                         telefonee: this.telefone,
                         inscEstaduall: this.inscEstadual,
-                        marca: this.marca,
-                        DescriçãoProdutoo: this.DescriçãoProduto
+                        cepp: this.cep,
+                        DescriçãoProdutoo: this.DescriçãoProduto,
+                        enderecoo: this.endereco
                     });
 
                     this.fotoo = '';
                     this.nameCliente = '';
-                    this.Quantidade = '';
+                    this.email = '';
                     this.tipoProduto = '';
                     this.telefone = '';
                     this.DescriçãoProduto = '';
                     this.inscEstadual = '';
-                    this.marca = ''; 
+                    this.cep = '';
+                    this.endereco ='';
                 },
 
                 removeContent(index){
