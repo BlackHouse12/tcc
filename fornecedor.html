@@ -121,14 +121,14 @@
                         <input v-model="Quantidade" type="text" placeholder="Quantidade" list="faixa2">
                         <h5>Tipo de Produto</h5>
                         <input v-model="tipoProduto" type="text" placeholder="Tipo de Produto" list="faixa4">
-                        <h5>codigo</h5>
-                        <input v-model="codigo" type="text" placeholder="codigo" list="faixa3">
+                        <h5>Inscriçaõ Estadual</h5>
+                        <input v-model="inscEstadual" type="text" placeholder="Insc. Estadual" list="faixa3">
                         </div>
                         <div class="columnModal">
                         <h5>CNPJ</h5>
                         <input v-model="Cnpj" type="text" placeholder="Cnpj" list="faixa5">
-                        <h5>valor</h5>
-                        <input v-model="valor" type="text" placeholder="valor" list="faixa6">
+                        <h5>telefone</h5>
+                        <input v-model="telefone" type="text" placeholder="telefone" list="faixa6">
                         <h5>Marca</h5>
                         <input v-model="marca" type="text" placeholder="Marca" list="faixa7">
                         </div>
@@ -161,8 +161,8 @@
                                                     <th> Foto <span class="icon-arrow">&UpArrow;</span></th>
                                                     <th> Razão Social <span class="icon-arrow">&UpArrow;</span></th>
                                                     <th> CNPJ <span class="icon-arrow">&UpArrow;</span></th>
-                                                    <th> Codigo <span class="icon-arrow">&UpArrow;</span></th>
-                                                    <th> Valor <span class="icon-arrow">&UpArrow;</span></th>
+                                                    <th> Insc. Estadual <span class="icon-arrow">&UpArrow;</span></th>
+                                                    <th> Telefone <span class="icon-arrow">&UpArrow;</span></th>
                                                     <th> Tipo de Produto <span class="icon-arrow">&UpArrow;</span></th>
                                                     <th> ações<span class="icon-arrow">&UpArrow;</span></th>
 
@@ -176,8 +176,8 @@
                                                     <td class="nomeImg"> <img src="assets/img/dog.jpg" alt="">{{comment.foto}}</td>
                                                     <td> {{comment.razaoS}} </tb>
                                                     <td> {{comment.cnpjj}} </tb>
-                                                    <td> {{comment.codigoo}}</td>
-                                                    <td> {{comment.valorr}} </td>
+                                                    <td> {{comment.inscEstaduall}}</td>
+                                                    <td> {{comment.telefonee}} </td>
                                                     <td> {{comment.tipoProdutoo}}</td>
 
                                                     <td><button class="edit"><i class='bx bx-edit-alt'></i></button> <button v-on:click="removeContent" class="delete"><i class='bx bx-trash' ></i></button></td>
@@ -202,8 +202,8 @@
                 razaoS: '',
                 cnpjj: '',
                 tipoProdutoo: '',
-                valorr: '',
-                codigoo: '',
+                telefonee: '',
+                inscEstaduall: '',
                 marca: '',
                 DescriçãoProduto: ''
             },
@@ -217,8 +217,8 @@
                         razaoS: this.RazaoSocial,
                         cnpjj: this.Cnpj,
                         tipoProdutoo: this.tipoProduto,
-                        valorr: this.valor,
-                        codigoo: this.codigo,
+                        telefonee: this.telefone,
+                        inscEstaduall: this.inscEstadual,
                         marca: this.marca,
                         DescriçãoProdutoo: this.DescriçãoProduto
                     });
@@ -227,9 +227,9 @@
                     this.nameCliente = '';
                     this.Quantidade = '';
                     this.tipoProduto = '';
-                    this.valor = '';
+                    this.telefone = '';
                     this.DescriçãoProduto = '';
-                    this.codigo = '';
+                    this.inscEstadual = '';
                     this.marca = ''; 
                 },
 
